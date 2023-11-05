@@ -1,7 +1,7 @@
 'use client';
 
 import { FloatButton } from 'antd';
-import { Anchor } from 'antd';
+import { Anchor, ConfigProvider } from 'antd';
 
 import Card from "./Card";
 import Footer from './Footer';
@@ -9,21 +9,6 @@ import { ArrowUpOutlined } from '@ant-design/icons';
 
 export default function Content() {
 
-  const goToHome = () => {
-    window.location.href = "#Home";
-  }
-
-  const goToSkill = () => {
-    window.location.href = "#Skill";
-  }
-
-  const goToProject = () => {
-    window.location.href = "#Project";
-  }
-
-  const goToContact = () => {
-    window.location.href = "#Contact";
-  };
 
   const gotToTop = () => {
     window.location.href = "#top";
@@ -32,16 +17,16 @@ export default function Content() {
   return (
     <div className="content">
       <div className="content-wrapper">
-        {/* <nav className="flex flex-row gap-3 list-none h-11 items-center mt-3">
-          <li onClick={goToHome}>home</li>
-          <li onClick={goToSkill}>skill</li>
-          <li onClick={goToProject}>project</li>
-          <li onClick={goToContact}>Contact</li>
-      </nav> */}
-
+        <ConfigProvider
+          theme={{
+            token: {
+              colorPrimary: '#F97316',
+            },
+          }}
+        >
         <Anchor
           direction="horizontal"
-          className='h-20 bg-white flex items-center'
+            className='h-20 backdrop-blur-md bg-white/30 flex items-center p-4'
           items={[
             {
               key: 'Home',
@@ -65,7 +50,7 @@ export default function Content() {
             }
           ]}
         />
-
+        </ConfigProvider>
 
         <section id='Home'>
           <h2 className='font-bold'>Home</h2>

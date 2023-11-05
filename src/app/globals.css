@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  scroll-behavior: smooth;
+}
+
+.content{
+  @apply w-4/5 mx-auto;
+}
+
+nav > li {
+  @apply border h-full flex items-center px-5 rounded-md cursor-pointer transition-all hover:bg-orange-200;
+}

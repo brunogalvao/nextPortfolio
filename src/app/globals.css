@@ -7,10 +7,18 @@
   scroll-behavior: smooth;
 }
 
-.content{
-  @apply w-4/5 mx-auto;
+.content-wrapper {
+  @apply mx-auto w-4/5 md:w-9/12;
 }
 
 nav > li {
   @apply border h-full flex items-center px-5 rounded-md cursor-pointer transition-all hover:bg-orange-200;
+}
+
+section {
+  @apply h-screen pt-28;
+}
+
+.footer{
+  @apply bg-gray-800 text-white h-80 mt-4 p-16;
 }
